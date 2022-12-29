@@ -8,4 +8,16 @@
     <string name="description_intro_3">Receba alertas quando quiser</string>
     <string name="description_intro_2">Categorizando seus lançamentos e vendo \n o destino de cada centavo</string>
     <string name="description_intro_1">Simples, fácil de usar e grátis</string>
+    <string name="crie_sua_conta_gratis">Crie sua conta gratis</string>
+    <string name="junte_se">Junte-se a mais de meio milhão\n de pessoas e comesse já</string>
+    <string name="cadastre_se">cadastre-se</string>
+    <string name="tenho_conta">Já tenho conta</string>
+    <string name="crie_sua_conta">Crie sua conta grátis</string>
+    <string name="edit_text_nome">Nome</string>
+    <string name="email">Email</string>
+    <string name="senha">Senha</string>
+    <string name="cadastrar">Cadastrar</string>
+    <string name="termos_de_uso">Termos de uso</string>
+    <string name="acesse_sua_conta">Acesse sua conta</string>
+    <string name="entrar">Entrar</string>
 </resources>
