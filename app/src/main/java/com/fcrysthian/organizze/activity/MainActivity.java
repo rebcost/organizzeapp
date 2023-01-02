@@ -9,10 +9,14 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.fcrysthian.organizze.R;
+import com.fcrysthian.organizze.config.ConfiguracaoFirebase;
+import com.google.firebase.auth.FirebaseAuth;
 import com.heinrichreimersoftware.materialintro.app.IntroActivity;
 import com.heinrichreimersoftware.materialintro.slide.FragmentSlide;
 
 public class MainActivity extends IntroActivity {
+
+    private FirebaseAuth autenticacao;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -61,5 +65,23 @@ public class MainActivity extends IntroActivity {
     public void btnCadastrar(View view){
         startActivity(new Intent(this, CadastroActivity.class));
 
+    }
+
+    public void verificarUsuarioLogado(){
+        autenticacao = ConfiguracaoFirebase.getFirebaseAutenticacao();
+//        autenticacao.signOut();
+        if (autenticacao.getCurrentUser() != null){
+            abrirTelaPrincipal();
+        }
+    }
+
+    private void abrirTelaPrincipal() {
+        startActivity(new Intent(this, PrincipalActivity.class));
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        verificarUsuarioLogado();
     }
 }
