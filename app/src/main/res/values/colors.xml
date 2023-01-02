@@ -10,4 +10,15 @@
     <color name="primary">#01c7d2</color>
     <color name="primaryDark">#00b2bc</color>
     <color name="accent">#ff706a</color>
+
+    <!--    Cores despesas   -->
+    <color name="primaryDespesa">#ff706a</color>
+    <color name="primaryDarkDespesa">#e66560</color>
+    <color name="AccentDespesa">#ff706a</color>
+
+    <!--    Cores Receitas   -->
+    <color name="primaryReceita">#00d39e</color>
+    <color name="primaryDarkReceita">#00be8b</color>
+    <color name="AccentReceita">#00d39e</color>
+
 </resources>
