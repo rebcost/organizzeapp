@@ -19,6 +19,34 @@
         <item name="windowNoTitle">true</item>
     </style>
 
+    <!--    Tema aplicado nas despesas  -->
+    <style name="despesasTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+
+        <item name="colorPrimary">@color/primaryDespesa</item>
+        <item name="colorPrimaryVariant">@color/primaryDarkDespesa</item>
+        <item name="colorSecondary">@color/AccentDespesa</item>
+        <item name="colorOnPrimary">@color/white</item>
+
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor">@color/primaryDarkDespesa</item>
+    </style>
+
+    <!--    Tema aplicado nas Receita -->
+    <style name="receitaTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+
+        <item name="colorPrimary">@color/primaryReceita</item>
+        <item name="colorPrimaryVariant">@color/primaryDarkReceita</item>
+        <item name="colorSecondary">@color/AccentReceita</item>
+        <item name="colorOnPrimary">@color/white</item>
+
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor">@color/primaryDarkReceita</item>
+    </style>
+
     <style name="Theme.Organizze.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
 
     <style name="Theme.Organizze.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
