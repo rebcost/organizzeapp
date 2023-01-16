@@ -80,6 +80,9 @@ public class DespesaActivity extends AppCompatActivity {
             if(!textoData.isEmpty()){
                 if(!textoCategoria.isEmpty()){
                     if(!textoDescricao.isEmpty()){
+                        Toast.makeText(DespesaActivity.this,
+                                "Despesa atualizada",
+                                Toast.LENGTH_SHORT).show();
                         return true;
                     }else{
                         Toast.makeText(DespesaActivity.this,

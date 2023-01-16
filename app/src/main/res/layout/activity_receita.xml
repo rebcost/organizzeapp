@@ -94,6 +94,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="24dp"
+        android:onClick="salvarReceita"
         android:clickable="true"
         app:backgroundTint="@color/AccentReceita"
         app:fab_colorNormal="@color/primaryReceita"
