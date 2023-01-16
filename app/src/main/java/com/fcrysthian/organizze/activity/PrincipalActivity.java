@@ -11,13 +11,16 @@ import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 
 import com.fcrysthian.organizze.R;
+import com.fcrysthian.organizze.config.ConfiguracaoFirebase;
 import com.fcrysthian.organizze.databinding.ActivityPrincipalBinding;
 import com.google.android.material.snackbar.Snackbar;
+import com.google.firebase.auth.FirebaseAuth;
 
 public class PrincipalActivity extends AppCompatActivity {
 
     private AppBarConfiguration appBarConfiguration;
     private ActivityPrincipalBinding binding;
+    private FirebaseAuth autenticacao;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,6 +35,7 @@ public class PrincipalActivity extends AppCompatActivity {
         appBarConfiguration = new AppBarConfiguration.Builder(navController.getGraph()).build();
         NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
 
+
     }
 
     public void adicionarDespesa(View view){
@@ -41,4 +45,7 @@ public class PrincipalActivity extends AppCompatActivity {
     public void adicionarReceita(View view){
         startActivity(new Intent(this, ReceitaActivity.class));
     }
+
+
+
 }

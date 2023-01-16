@@ -10,6 +10,9 @@ public class Usuario {
     private String email;
     private String senha;
     private String idUsuario;
+    private Double totalDespesas = 0.00;
+    private Double totalReceitas = 0.00;
+
 
     public Usuario() {
     }
@@ -39,13 +42,29 @@ public class Usuario {
         this.email = email;
     }
 
+    @Exclude
     public String getSenha() {
         return senha;
     }
 
-    @Exclude
     public void setSenha(String senha) {
         this.senha = senha;
+    }
+
+    public Double getTotalDespesas() {
+        return totalDespesas;
+    }
+
+    public void setTotalDespesas(Double totalDespesas) {
+        this.totalDespesas = totalDespesas;
+    }
+
+    public Double getTotalReceitas() {
+        return totalReceitas;
+    }
+
+    public void setTotalReceitas(Double totalReceitas) {
+        this.totalReceitas = totalReceitas;
     }
 
     public void salvar(){
