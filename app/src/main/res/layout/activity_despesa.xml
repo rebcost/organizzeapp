@@ -95,7 +95,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="24dp"
         android:clickable="true"
-        android:onClick="salvarReceita"
+        android:onClick="salvarDespesa"
         app:backgroundTint="@color/AccentDespesa"
         app:fab_colorNormal="@color/primaryDespesa"
         app:fab_colorPressed="@color/primaryDarkDespesa"
