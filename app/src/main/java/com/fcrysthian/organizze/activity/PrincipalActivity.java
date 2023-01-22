@@ -3,6 +3,8 @@ package com.fcrysthian.organizze.activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.CalendarView;
+import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.navigation.NavController;
@@ -15,12 +17,16 @@ import com.fcrysthian.organizze.config.ConfiguracaoFirebase;
 import com.fcrysthian.organizze.databinding.ActivityPrincipalBinding;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.firebase.auth.FirebaseAuth;
+import com.prolificinteractive.materialcalendarview.CalendarDay;
+import com.prolificinteractive.materialcalendarview.MaterialCalendarView;
+import com.prolificinteractive.materialcalendarview.OnMonthChangedListener;
 
 public class PrincipalActivity extends AppCompatActivity {
 
     private AppBarConfiguration appBarConfiguration;
     private ActivityPrincipalBinding binding;
-    private FirebaseAuth autenticacao;
+    private MaterialCalendarView calendarView;
+    private TextView textoSaldo, textoSaudacao;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,6 +41,27 @@ public class PrincipalActivity extends AppCompatActivity {
         appBarConfiguration = new AppBarConfiguration.Builder(navController.getGraph()).build();
         NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
 
+        calendarView = findViewById(R.id.calendarView);
+        textoSaldo = findViewById(R.id.textSaldo);
+        textoSaudacao = findViewById(R.id.textSaudacao);
+
+        configuraCalendarView();
+
+
+    }
+
+    private void configuraCalendarView() {
+
+        CharSequence meses[] = {"Janeiro","Fevereiro", "Março","Abril", "Maio", "Junho", "Julho",
+        "Setembro", "Outubro", "Novembro", "Dezembro"};
+
+        calendarView.setTitleMonths(meses);
+        calendarView.setOnMonthChangedListener(new OnMonthChangedListener() {
+            @Override
+            public void onMonthChanged(MaterialCalendarView widget, CalendarDay date) {
+
+            }
+        });
 
     }
 
